@@ -8,13 +8,13 @@ services:
     ports:
       - 1234:80
     volumes:
-      - ./www/laravel:/var/www
+      - ./www:/var/www
 
   php:
     build:
       context: ./phpfpm
     volumes:
-      - ./www/laravel:/var/www
+      - ./www:/var/www
     depends_on:
       - mysql
 
